@@ -1,0 +1,31 @@
+div {
+    /* 余白 */
+    margin: 10px;
+}
+
+.left {
+    float: left;
+}
+
+.clearboth {
+    clear: both;
+}
+
+.circle {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+
+.square {
+    width: 100px;
+    height: 100px;
+}
+
+.background_color_green {
+    background-color: greenyellow;
+}
+
+.background_color_red {
+    background-color: red;
+}
