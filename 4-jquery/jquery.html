@@ -7,25 +7,28 @@
         <link rel="stylesheet" type="text/css" href="./contents/sharesytle.css">
     </head>
     <body>
-        <div class="circle background_color_green left">
-
-        </div>
-        <div class="square background_color_red left">
-
-        </div>
-        <div class="square background_color_red left">
+        <div class="circle background_color_green">
 
         </div>
 
+        <p>
+            contents
+        </p>
+
+        <iframe src="http://entreschoolonline.com">
+            <!-- <iframe src="https://youtu.be/Il-an3K9pjg"> -->
+
+        </iframe>
         <script type="text/javascript">
-            // if(typeof jQuery == "undefined"){
-            //     alert("not installed jQurey");
-            // }
-            // else {
-            //     alert("installed jQurey");
-            // }
-            $('.circle').click(function(){
-                alert('circle clicked');
+            $('.circle').hover(function(){
+                // update contents
+                // $('p').html('circle clicked');
+                // get contents
+                // alert($('p').html());
+
+                // add or update attribute
+                // attr(attr, value)
+                $("iframe").attr("src", "https://youtube.com")
             })
         </script>
     </body>
