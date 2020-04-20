@@ -10,26 +10,27 @@
         <div class="circle background_color_green">
 
         </div>
+        <div class="square background_color_red">
 
-        <p>
-            contents
-        </p>
+        </div>
+        <div class="square background_color_red">
+            
+        </div>
 
-        <iframe src="http://entreschoolonline.com">
-            <!-- <iframe src="https://youtu.be/Il-an3K9pjg"> -->
-
-        </iframe>
         <script type="text/javascript">
-            $('.circle').hover(function(){
-                // update contents
-                // $('p').html('circle clicked');
-                // get contents
-                // alert($('p').html());
-
-                // add or update attribute
-                // attr(attr, value)
-                $("iframe").attr("src", "https://youtube.com")
-            })
+             $(".circle").click(function(){
+                $(".circle").css("width", "200px");
+                $(".circle").css("height", "200px");
+                $(".circle").css("background-color", "blue");
+                // alert($(".circle").css("margin"));
+                $(".circle").after('<div class="square background_color_red"></div>');
+                $(".circle").css("display", "none");
+             })
+             $(".square").click(function(){
+                //  $(".square").remove();
+                // $(this): イベント発火の要素
+                 $(this).remove();
+             })
         </script>
     </body>
 </html>
