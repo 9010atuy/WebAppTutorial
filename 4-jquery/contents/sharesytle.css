@@ -37,3 +37,8 @@ div {
 .background_color_red {
     background-color: red;
 }
+
+#image {
+    width: 50%;
+    height: 50%;
+}

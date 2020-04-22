@@ -9,6 +9,12 @@
 </head>
 
 <body>
+    <button id="ctrImage">
+        image
+    </button>
+    <button id="toggle">
+        toggle
+    </button>
     <!-- 要素をずらさない -->
     <div class="fixBox">
         <div class="circle background_color_green">
@@ -18,12 +24,8 @@
     <div class="square background_color_red">
 
     </div>
-    <div class="square background_color_red">
-
-    </div>
-    <button id="toggle">
-        toggle
-    </button>
+    <img id="image" src="../Images/IMG_6585.jpeg"/>
+    
 
     <script type="text/javascript">
         $(".circle").click(function () {
@@ -47,6 +49,10 @@
             } else {
                 circle.fadeOut("normal");
             }
+        })
+        $("#ctrImage").click(function(){
+            $("#image").animate({width:"20%"}, 2000);
+            $(".circle").animate({marginLeft:"100%"}, 2000);
         })
     </script>
 </body>
