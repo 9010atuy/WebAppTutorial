@@ -1,36 +1,54 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> -->
-        <script src="jquery-3.5.0.min.js"></script>
-        
-        <link rel="stylesheet" type="text/css" href="./contents/sharesytle.css">
-    </head>
-    <body>
+
+<head>
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> -->
+    <script src="jquery-3.5.0.min.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="./contents/sharesytle.css">
+</head>
+
+<body>
+    <!-- 要素をずらさない -->
+    <div class="fixBox">
         <div class="circle background_color_green">
 
         </div>
-        <div class="square background_color_red">
+    </div>
+    <div class="square background_color_red">
 
-        </div>
-        <div class="square background_color_red">
-            
-        </div>
+    </div>
+    <div class="square background_color_red">
 
-        <script type="text/javascript">
-             $(".circle").click(function(){
-                $(".circle").css("width", "200px");
-                $(".circle").css("height", "200px");
-                $(".circle").css("background-color", "blue");
-                // alert($(".circle").css("margin"));
-                $(".circle").after('<div class="square background_color_red"></div>');
-                $(".circle").css("display", "none");
-             })
-             $(".square").click(function(){
-                //  $(".square").remove();
-                // $(this): イベント発火の要素
-                 $(this).remove();
-             })
-        </script>
-    </body>
+    </div>
+    <button id="toggle">
+        toggle
+    </button>
+
+    <script type="text/javascript">
+        $(".circle").click(function () {
+            $(".circle").css("width", "200px");
+            $(".circle").css("height", "200px");
+            $(".circle").css("background-color", "blue");
+            // alert($(".circle").css("margin"));
+            $(".circle").after('<div class="square background_color_red"></div>');
+            $(".circle").css("display", "none");
+        })
+        $(".square").click(function () {
+            //  $(".square").remove();
+            // $(this): イベント発火の要素
+            $(this).fadeOut("fast");
+            $(this).fadeIn("fast");
+        })
+        $("#toggle").click(function () {
+            var circle = $(".circle");
+            if (circle.css("display") == "none") {
+                circle.fadeIn("normal");
+            } else {
+                circle.fadeOut("normal");
+            }
+        })
+    </script>
+</body>
+
 </html>

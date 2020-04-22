@@ -24,6 +24,12 @@ div {
     border: solid 1px;
 }
 
+.fixBox {
+    width: 100px;
+    height: 100px;
+    margin: 0px;
+}
+
 .background_color_green {
     background-color: greenyellow;
 }
